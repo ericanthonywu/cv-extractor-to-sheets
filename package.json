@@ -1,0 +1,17 @@
+{
+  "name": "cv-extractor",
+  "version": "1.0.0",
+  "description": "Extract data from CV PDFs and append to Google Sheets",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "googleapis": "^144.0.0",
+    "pdf-parse": "^1.1.1"
+  }
+}
