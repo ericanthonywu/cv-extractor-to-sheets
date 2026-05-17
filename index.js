@@ -11,6 +11,13 @@ async function main() {
   const files = await listPdfFiles();
   if (files.length === 0) return console.log("No PDFs found.");
 
+  // Sort by CV number (numeric ascending)
+  files.sort((a, b) => {
+    const numA = parseInt(a.name.split("_")[0]) || 0;
+    const numB = parseInt(b.name.split("_")[0]) || 0;
+    return numA - numB;
+  });
+
   let success = 0, fail = 0;
   const errors = [];
 
